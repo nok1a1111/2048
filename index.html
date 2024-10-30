@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>340282366920938463463374607431768211456</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">340282366920938463463374607431768211456</h1>
+        <div class="heading">
+            <div class="score-board">
+                <div class="score" id="score">
+                    <span id="score-view">0</span>
+                    <div class="score-add"></div>
+                </div>
+                <div class="best-score">
+                    <span id="highScore">0</span>
+                    <div class="best-add"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="above-game">
+            <p class="game-intro">Join the numbers and get to the <strong>340282366920938463463374607431768211456
+                    tile!</strong></p>
+            <button class="restart-button" id="newGame">New Game</button>
+        </div>
+
+        <div class="game-container">
+            <div id="grid" class="grid"></div>
+        </div>
+
+        <br>
+        <div class="controls">
+            <p>
+                <strong>Move randomly with </strong>
+                <input type="number" id="interval">
+                <strong>ms. </strong>
+                <button id="autoPlay">run</button>
+                <button id="stopAutoPlay">stop</button>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

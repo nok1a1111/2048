@@ -1,0 +1,337 @@
+body {
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    background-color: #faf8ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 80px;
+    font-size: 18px;
+    color: #776e65;
+}
+
+body {
+    margin: 200px 0;
+}
+
+
+.heading:after {
+    content: "";
+    display: flex;
+    clear: both;
+    margin-bottom: 20px;
+}
+
+.controls {
+    text-align: center;
+}
+
+input {
+    display: inline-block;
+    appearance: auto;
+    -moz-default-appearance: textfield;
+    width: 80px;
+    padding-block: 1px;
+    padding-inline: 2px;
+    border: 2px inset ButtonBorder;
+    background-color: Field;
+    color: FieldText;
+    font: -moz-field;
+    text-rendering: optimizeLegibility;
+    cursor: text;
+    overflow-clip-box: padding-box content-box;
+}
+
+h1.title {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    display: block;
+    float: left;
+}
+
+.above-game:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.game-intro {
+    float: left;
+    line-height: 42px;
+    margin-bottom: 0;
+}
+
+.restart-button {
+    display: inline-block;
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #f9f6f2;
+    height: 40px;
+    line-height: 42px;
+    display: block;
+    text-align: center;
+    float: right;
+    border: none;
+}
+
+.score-board {
+    float: right;
+    display: flex;
+    text-align: right;
+}
+
+.score,
+.best-score {
+    position: relative;
+    background: #bbada0;
+    border-radius: 3px;
+    padding: 15px 25px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 8px;
+    margin-left: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    height: 25px;
+    line-height: 47px;
+    display: block;
+    text-align: center;
+}
+
+.score:after,
+.best-score:after {
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 13px;
+    text-align: center;
+    color: #eee4da;
+}
+
+.score .score-add,
+.best-score .best-add {
+    position: absolute;
+    right: 30px;
+    color: red;
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: bold;
+    color: rgba(119, 110, 101, 0.9);
+    z-index: 100;
+    -webkit-animation: move-up 600ms ease-in;
+    -moz-animation: move-up 600ms ease-in;
+    animation: move-up 600ms ease-in;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes move-up {
+    0% {
+        top: 25px;
+        opacity: 1;
+    }
+
+    100% {
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes move-up {
+    0% {
+        top: 25px;
+        opacity: 1;
+    }
+
+    100% {
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+@keyframes move-up {
+    0% {
+        top: 25px;
+        opacity: 1;
+    }
+
+    100% {
+        top: -50px;
+        opacity: 0;
+    }
+}
+
+.score:after {
+    content: "Score";
+}
+
+.best-score:after {
+    content: "Best";
+}
+
+strong.important {
+    text-transform: uppercase;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 80px);
+    gap: 10px;
+    justify-content: center;
+    background-color: #bbada0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    text-align: center;
+    line-height: 80px;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #776e65;
+    border-radius: 10px;
+    background-color: #cdc1b4;
+    transition: all 0.2s ease-in-out;
+}
+
+.cell[data-value="2"] {
+    background-color: #eee4da;
+    color: #776e65;
+}
+
+.cell[data-value="4"] {
+    background-color: #ede0c8;
+    color: #776e65;
+}
+
+.cell[data-value="8"] {
+    background-color: #f2b179;
+    color: #f9f6f2;
+}
+
+.cell[data-value="16"] {
+    background-color: #f59563;
+    color: #f9f6f2;
+}
+
+.cell[data-value="32"] {
+    background-color: #f67c5f;
+    color: #f9f6f2;
+}
+
+.cell[data-value="64"] {
+    background-color: #f65e3b;
+    color: #f9f6f2;
+}
+
+.cell[data-value="128"] {
+    background-color: #edcf72;
+    color: #f9f6f2;
+}
+
+.cell[data-value="256"] {
+    background-color: #edcc61;
+    color: #f9f6f2;
+}
+
+.cell[data-value="512"] {
+    background-color: #edc850;
+    color: #f9f6f2;
+}
+
+.cell[data-value="1024"] {
+    background-color: #edc53f;
+    color: #f9f6f2;
+}
+
+.cell[data-value="2048"] {
+    background-color: #edc22e;
+    color: #f9f6f2;
+}
+
+.cell[data-value="4096"] {
+    background-color: #c9a326;
+    color: #f9f6f2;
+}
+
+.cell[data-value="8192"] {
+    background-color: #aa891f;
+    color: #f9f6f2;
+}
+
+.cell[data-value="16384"] {
+    background-color: #8f7319;
+    color: #f9f6f2;
+}
+
+.v16384 {
+    background-color: #8f7319;
+    color: #f9f6f2;
+}
+
+/* その他の大きな値にも色を追加可能 */
+
+.spawn-animation {
+    animation: pop 0.2s forwards;
+}
+
+.move-animation {
+    transition: transform 0.2s ease-in-out;
+}
+
+.slide {
+    transition: transform 0.2s ease;
+    transform: translateX(10px);
+}
+
+/* スライドアニメーション */
+@keyframes slide {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(5px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+/* マージアニメーション */
+@keyframes merge {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* スライドアニメーションを適用 */
+.cell.slide {
+    animation: slide 0.2s forwards;
+}
+
+/* マージアニメーションを適用 */
+.cell.merge {
+    animation: merge 0.2s forwards;
+}
